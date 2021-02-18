@@ -11,7 +11,8 @@ The dataset we will use are the reddit posts categorized as “DD” (Due Dilige
 ## I. Introduction
 
 ## II. Materials and Methods
-For this project, we will use two datasets. The first dataset is the subReddit post from Reddit, which we are getting by using "praw" API. ""
+For this project, we will use two datasets.   
+The first dataset is the subReddit post/submission from Reddit, which we are getting by using "praw" API and pushshift API. The Reddit dataset has 8 columns of data: title,score,upvote_ratio,author,text,url,created(timestamp), and comments. Except upvote_ratio and created(timestamp), all datas are textual data.
 
 Matthew Pan (40135588)<br>
 Ling Zhi Mo (40024810)
