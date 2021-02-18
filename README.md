@@ -8,5 +8,9 @@ The dataset we will use are the reddit posts categorized as “DD” (Due Dilige
 
 ***
 
+## Introduction
+
+## Materials and Methods
+
 Matthew Pan (40135588)<br>
 Ling Zhi Mo (40024810)
