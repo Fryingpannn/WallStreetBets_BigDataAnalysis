@@ -8,9 +8,10 @@ The dataset we will use are the reddit posts categorized as “DD” (Due Dilige
 
 ***
 
-## Introduction
+## I. Introduction
 
-## Materials and Methods
+## II. Materials and Methods
+For this project, we will use two datasets. The first dataset is the subReddit post from Reddit, which we are getting by using "praw" API. ""
 
 Matthew Pan (40135588)<br>
 Ling Zhi Mo (40024810)
