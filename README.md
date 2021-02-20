@@ -1,4 +1,4 @@
-# WallStreetBets Stock Research Posts Prediction
+# :rocket: WallStreetBets Stock Research Posts Prediction :rocket:
 
 ***
 ## I. Abstract
@@ -15,7 +15,7 @@ We will be able to provide a quick filter on the top research posts as well as p
 
 A related work is a website called SwaggyStocks.com, in which sentiment analysis of the r/WallStreetBets subreddit is done and visualized. However, we differ from this as we are not explicitly trying to analyze sentiment of the subreddit, we are only targeting the analysis the serious research posts and their corresponding stock.
 
-***DD: Stands for "Due Diligence". Represents the investigation and research a person has done for a potential investment.**
+***<ins>DD</ins>: Stands for "Due Diligence". Represents the investigation and research a person has done for a potential investment.**
 
 ## III. Materials and Methods
 
