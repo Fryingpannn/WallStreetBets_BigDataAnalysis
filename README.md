@@ -13,7 +13,9 @@ The dataset we will use are the reddit posts categorized as “DD” (Due Dilige
 ## II. Materials and Methods
 For this project, we will use two datasets.   
 The first dataset is the subReddit post/submission from Reddit, which is extracted by using "praw" API and pushshift API.  
-The Reddit dataset has 8 columns of data: title,score,upvote_ratio,author,text,url,created(timestamp), and comments. Except upvote_ratio and created(timestamp), all datas are textual data.
+The Reddit dataset has 9 columns of data: title,score,upvote_ratio,author,text,url,created(timestamp), comments and link flair text (tags). Except upvote_ratio and created(timestamp), all datas are textual data. There are many ways to analyze textual data, Naive-Bayes method can be used to build a Reddit-post classifer. To build the Naive-Bayes classifier, we need to split the posts into significant posts and less significant posts. We can first use the posts' tags to identify them (tag of DD). We will also need to extract features from the textual data from these posts, one of the way is tokenize all the english words in the text, count their frequencies and compare it to other posts.
+
+The second dataset is the stock market data from iexfinance. This dataset includes quote, stats, financials, cash-flow of a specific stock. However, we are interested in the time series data of the stocks to evaluate the effects and its consequence that it brings to the stock. 
 
 Matthew Pan (40135588)<br>
 Ling Zhi Mo (40024810)
