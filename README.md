@@ -29,6 +29,3 @@ The second dataset is the stock market data from iexfinance. This dataset includ
 
 
 ***
-
-Matthew Pan (40135588)<br>
-Ling Zhi Mo (40024810)
