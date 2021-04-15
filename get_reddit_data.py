@@ -21,16 +21,16 @@ from iexfinance.account import get_metadata
 
 
 ticker_set=set()
-backupkey = 'sk_395677584cc94b26b02ad7143e6d8529'
+backupkey = ''
 def sandbox(change):
   if change:
     # Set IEX Finance API Token for Sandbox test mode
     os.environ['IEX_API_VERSION'] = 'iexcloud-sandbox'
-    os.environ['IEX_TOKEN'] = 'Tsk_4a569bad48a7430f9db3b0768a963493'
+    os.environ['IEX_TOKEN'] = ''
   else:
     # Real
     os.environ['IEX_API_VERSION'] = 'stable'
-    os.environ['IEX_TOKEN'] = 'sk_395677584cc94b26b02ad7143e6d8529'
+    os.environ['IEX_TOKEN'] = ''
 
 sandbox(False)
 
