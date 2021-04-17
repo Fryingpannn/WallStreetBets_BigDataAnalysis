@@ -1,5 +1,7 @@
 # :rocket: WallStreetBets Stock Research Posts Classifier :rocket:
 
+Project presentation: https://youtu.be/fVCxdmDW9TI 😄
+
 ***
 # **I. Abstract**
 
