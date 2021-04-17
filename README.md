@@ -37,12 +37,15 @@ These posts are filtered and cleaned with many conditions, some you may see in t
 
 To extract features, we first lemmatized the texts of each post with Spark NLP, an extension package which provides a pre-trained NLP model. we then used CountVectorizer and HashingTF from PySpark to transform textual data into vectors. CountVectorizer generates the Document-Term Matrix and contains the size of the entire vocabulary, whereas HashingTF also generates this text vector but with lower number of features (performs dimensionality reduction). 
 
-The algorithm we used is Naive Bayes from PySpark's machine learning library. Naive Bayes is a supervised learning classification model based on applying Bayes' theorem. The features are the results from CountVectorizer and HashingTF. We tested with two hyperparameters, the smoothing value and the model type. The smoothing value is used to replace 0 probability event, as it makes the entire event impossible due to 1 missing feature. We also used the two most appropriate Naive Bayes model types, Complement, and Multinomial. Each model type changes the algorithm with a different method to compute the model’s coefficients, where Complement Naive Bayes is more suited for imbalanced datasets than Multinomial Naive Bayes. All these factors were randomized in many iterations to obtain the best combination.
+### Naive Bayes
+The first algorithm we used is Naive Bayes from PySpark's machine learning library. Naive Bayes is a supervised learning classification model based on applying Bayes' theorem. The features are the results from CountVectorizer and HashingTF. We tested with two hyperparameters, the smoothing value and the model type. The smoothing value is used to replace 0 probability event, as it makes the entire event impossible due to 1 missing feature. We also used the two most appropriate Naive Bayes model types, Complement, and Multinomial. Each model type changes the algorithm with a different method to compute the model’s coefficients, where Complement Naive Bayes is more suited for imbalanced datasets than Multinomial Naive Bayes. All these factors were randomized in many iterations to obtain the best combination.
 
+### Clustering
 The second algorithm we used is k-means clustering from both PySpark's machine learning library and scikit-learn, combined with PCA, TruncatedSVD/t-SNE from scikit-learn for dimensionality reduction. Because our features are vectors with thousands of dimensions (words), to visualize and plot the data we need to perform dimensionality reduction. We tested our dataset with PCA, and TruncatedSVD/t-SNE. Principal Component Analysis (PCA) maps features to an N-dimensional space, and chooses a custom number of main axis to represent the data. For PCA, the decisions of using which axis is based on the minimized square distances between the data points and the axis, whereas t-SNE uses the probability of neighboring points, and computes the best components to represent that probability. 
 
 # IV. Results
 
+## Naive Bayes
 As previously noted, the label we used to train our Naive Bayes classifier is the growth percentage of a stock associated with a given reddit post, with the instances being the text of each post. 
 
 With this, our best model achieved an accuracy of 64.91%. This was obtained by choosing CountVectorizer to vectorize our features, using Multinomial Naive Bayes and a smoothing parameter of 0.2684835. This model had an F1 score of 0.65, precision of 0.58 and recall of 0.73.
@@ -56,6 +59,8 @@ In the following table, you may observe the top 10 results we obtained from over
 For HashingTF, we used 50 as the 'number of features' hyperparameter (default is 20). This essentially causes dimensionality reduction on each of our instances, which may be why the overall accuracy mean is lower than CountVectorizer as less features are considered during training, leading to loss of information.
 
 It also seems that the model type, whether multinomial or complement, lead to similar results. In theory, complement Naive Bayes works better on imbalanced datasets than multinomial Naive Bayes. Although our dataset is balanced as both classes are split 50/50, the features themselves of each instance may not be balanced as a lot of posts are talking about the same stock: GME. We suspect this may be the reason why both model types have similar results.
+
+## Clustering
 
 For clustering, it was difficult to see the differences in clusters. Although we performed many iterations while changing different parameters, the results from PySpark were similar. Here's an example obtained with k-means++. Most of our results looked like this whether we used t-SNE/TruncateSVD or PCA for dimensionality reduction.
 
@@ -75,13 +80,15 @@ In the next section, we shall discuss the relevance of our solutions and possibl
 
 Numerically, with 65% accuracy, our Naive Bayes model doesn't seem tremendously "accurate" or "precise". However, it must be noted that the goal of this classifier is simply to indicate which posts has a higher chance of being worth the user's time to read. Remember that this result is also obtained after having already filtered the posts with many variables as previously mentioned, thus the final classified posts actually have very good chances to be worth a read.
 
-We must however mention the potential issues of our model.
+## Potential Issues
 
 1. Bias
     - In the data we used to train our Naive Bayes classifier, a lot of the posts were discussing about the same stock, GME. This can cause some degree of bias as the words in those posts have a higher chance to relate to each other.
     - Although our ticker extraction algorithm is very accurate, sometimes the ticker identified for a given post is still inaccurate. This can also cause bias as then the computed growth percentage (label) would not be relevant for the associated post.
 2. Lack of data
     - From around 40 000 posts, we filtered and cleaned it down to 1141 data points. Although these remaining 1141 posts we used to train the model were of good quality due to all the filtering we did, it is still a small quantity. We believe we may get even better results by acquiring more data, which was very difficult due to API limitations.
+
+## Closing thoughts
 
 As for utility, we believe our solution, with just a bit more tuning, can actually be useful and create value. In the goal of making access to stock researches easier, we plan to create a website, on which many features would be present. This Naive Bayes classifier can easily be one of the features: by displaying a list of filtered research posts, we may indicate beside each of them, the probability that they would be worth a read.
 
@@ -92,4 +99,5 @@ In conclusion, this project was incredibly interesting for us. We had the chance
 ***
 
 Matthew Pan - 40135588
+
 Ling Zhi Mo - 40024810
