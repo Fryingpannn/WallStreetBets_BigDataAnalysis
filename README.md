@@ -1,4 +1,4 @@
-# :rocket: WallStreetBets Stock Research Posts Prediction :rocket:
+# :rocket: WallStreetBets Stock Research Posts Classifier :rocket:
 
 ***
 # **I. Abstract**
