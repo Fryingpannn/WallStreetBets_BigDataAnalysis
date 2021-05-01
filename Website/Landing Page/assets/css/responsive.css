@@ -1,0 +1,103 @@
+/* only small desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .countdown-timer .heading-count h2 {
+    font-size: 36px;
+  }
+  #hero-area .contents .head-title {
+    font-size: 40px;
+  }
+  .line-right .time-count .time-entry {
+    width: 100px;
+    height: 100px;
+  }
+  .line-right .time-count .time-entry span {
+    font-size: 40px;
+  }
+  .countdown-timer {
+    padding: 260px 0;
+  }
+}
+
+/* tablets */
+@media (max-width: 991px) {
+  .section-title {
+    position: relative;
+    margin-bottom: 10px;
+  }
+}
+
+/* only small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .intro .heading-count h2 {
+    font-size: 30px;
+  }
+  .countdown-timer .heading-count h2 {
+    font-size: 30px;
+  }
+  .countdown-timer .heading-count h2 {
+    font-size: 25px;
+  }
+  .time-countdown .time-entry {
+    width: 100px;
+    height: 100px;
+  }
+  .time-countdown .time-entry span {
+    font-size: 30px;
+  }
+}
+
+/* mobile or only mobile */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .section-sub {
+    font-size: 16px;
+  }
+  .intro .heading-count h2 {
+    font-size: 26px;
+  }
+  .time-countdown .time-entry {
+    width: 100px;
+    height: 100px;
+  }
+  .time-countdown .time-entry span {
+    font-size: 30px;
+  }
+  .time-countdown {
+    margin-bottom: 30px;
+  }
+  .countdown-timer .heading-count {
+    padding: 10px;
+  }
+  .countdown-timer .heading-count h2 {
+    font-size: 26px;
+  }
+  .countdown-timer .heading-count h4 {
+    font-size: 12px;
+  }
+  .subscribe-form .form-inline .btn {
+    width: 125px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .time-countdown .time-entry {
+    width: 100px;
+    height: 100px;
+  }
+  .time-countdown .time-entry span {
+    font-size: 30px;
+  }
+  .subscribe-form .form-inline .btn {
+    width: 125px;
+  }
+  .btn {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
