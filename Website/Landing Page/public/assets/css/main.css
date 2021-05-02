@@ -20,6 +20,15 @@ body {
   overflow-x: hidden;
 }
 
+.darken {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/wsb.jpg);
+}
+
 h1, h2, h3, h4 {
   font-size: 36px;
   font-weight: 700;
@@ -559,7 +568,10 @@ a.back-to-top:hover, a.back-to-top:focus {
 3. Hero Area
 ========================================================================== */
 .intro {
-  background: url(../img/wsb.jpg) no-repeat;
+  background: linear-gradient(
+    rgba(37, 36, 36, 0.5),
+    rgba(37, 36, 36, 0.5)
+  ), url(../img/wsb.jpg) no-repeat;
   background-position: center center;
   background-size: cover;
   color: #fff;

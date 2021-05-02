@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wsbrecommender"
+  },
+  "targets": {
+    "wsbrecommender": {
+      "hosting": {
+        "wsb": [
+          "wsbrecommender"
+        ]
+      }
+    }
+  }
+}

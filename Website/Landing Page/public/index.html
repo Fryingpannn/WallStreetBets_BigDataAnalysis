@@ -56,7 +56,7 @@
               <span class="lni-menu"></span>
               <span class="lni-menu"></span>
             </button>
-            <a href="index-2.html" class="navbar-brand"><img src="" alt=""></a>
+            <a href="index.html" class="navbar-brand"><img src="" alt=""></a>
           </div>
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
@@ -96,11 +96,13 @@
             <div class="row justify-content-center">
               <div id="clock" class="time-count" style="visibility:hidden"></div>
             </div>
-            <p class="lead" style="text-shadow: 0.8px 0.8px rgba(3, 3, 3, 0.5); margin-bottom: 3%;">Sign up to get notified when our website goes live! We promise no other emails will be sent :)</p>
+            <div class="help-block with-errors"></div>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <p class="lead" style="text-shadow: 0.8px 0.8px rgba(3, 3, 3, 0.5); margin-bottom: 3%;">Sign up to get notified when our website goes live! We promise that no other emails will be sent :)</p>
             <div class="col-lg-12 col-md-12 col-xs-12" style="padding-left: 10%; padding-right: 10%;">
               <div class="subscribe-form text-center">
-                <form class="form-inline">
-                  <input name="email" class="form-control btn-rounded" placeholder="Email Address" type="email"> 
+                <form id="contactForm" class="form-inline">
+                  <input id="email" name="email" class="form-control btn-rounded text-secondary" placeholder="Email Address" type="email"> 
                   <button class="btn btn-common btn-round" type="submit">Submit</button>
                 </form>
               </div>
@@ -119,9 +121,9 @@
               </div>
             </form>
             -->
-            <a href="#services" class="btn btn-border">About</a>
+            <!--<a href="#services" class="btn btn-border">About</a>-->
             <div class="social mt-4">
-              <a class="youtube" href="https://www.youtube.com/channel/UCfeMEuhdUtxtaUMNSvxq_Xg"><i class="lni lni-youtube"></i></a>
+              <a class="youtube" href="https://www.youtube.com/channel/UCfeMEuhdUtxtaUMNSvxq_Xg" target="_blank"><i class="lni lni-youtube"></i></a>
             </div>
             <a href="#services" class="target-scroll page-scroll"><i class="lni-chevron-down"></i></a>
           </div>
@@ -146,11 +148,11 @@
               This project aims to be particularly useful towards those, such as ourselves, who are interested in trading and investing in the stock market, but have 
               little time to find or do their own research.
               <br><br>
-              We are using the posts on <a href="https://www.reddit.com/r/wallstreetbets/">r/WallStreetBets</a> as our dataset to separate the most valuable posts from the
-              less valuable ones by leveraging machine learning (supervised classification based on stock growths and text data) in order to help any busy user 
+              We are filtering out the most valuable posts from <a href="https://www.reddit.com/r/wallstreetbets/">r/WallStreetBets</a>
+               by leveraging machine learning (supervised classification based on stock growths and text data) in order to help any busy user 
               quickly filter out what they want to read. 
               <br><br>
-              We would like to further democratize stock trading by making the access to insightful stock research easier. 
+              We aim to further democratize stock trading by making the access to insightful stock research easier. 
               Most people already know about the mainstream news outlets, this is why we choose this subreddit, where unique, unpopularized and insightful research are buried
               in a sea of quality memes.
             </div>
@@ -158,33 +160,24 @@
         </div>
         
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-xs-12 fadeInUp" data-animation="fadeInUp">
+          <div class="col-lg-6 col-md-6 col-xs-12 fadeInUp" data-animation="fadeInUp">
             <div class="services-item">
               <div class="icon">
-                <i class="lni-brush"></i>
+                <a class="youtube" href="https://www.youtube.com/channel/UCfeMEuhdUtxtaUMNSvxq_Xg" target="_blank"><i class="lni lni-youtube"></i></a>
               </div>
-              <h3><a href="#">Kek</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt laboriosam harum, voluptatem fugiat perspiciatis.</p>
+              <h3><a href="https://www.youtube.com/channel/UCfeMEuhdUtxtaUMNSvxq_Xg" target="_blank">YouTube</a></h3>
+              <p></p>
             </div>
           </div> 
-          <div class="col-lg-4 col-md-6 col-xs-12 fadeInUp" data-animation="fadeInUp" data-delay="300">
+          <div class="col-lg-6 col-md-6 col-xs-12 fadeInUp" data-animation="fadeInUp" data-delay="300">
             <div class="services-item">
               <div class="icon">
-                <i class="lni-mobile"></i>
+                <a href="#"><i class="lni lni-reddit"></i></a>
               </div>
-              <h3><a href="#">Kek</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt laboriosam harum, voluptatem fugiat perspiciatis.</p>
+              <h3><a href="https://www.reddit.com/r/wallstreetbets/" target="_blank">Reddit</a></h3>
+              <p></p>
             </div>
           </div> 
-          <div class="col-lg-4 col-md-6 col-xs-12 fadeInUp" data-animation="fadeInUp" data-delay="600">
-            <div class="services-item">
-              <div class="icon">
-                <i class="lni-bullhorn"></i>
-              </div>
-              <h3><a href="#">Kek</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt laboriosam harum, voluptatem fugiat perspiciatis.</p>
-            </div>
-          </div>
          </div>
       </div>
     </section>
@@ -196,11 +189,13 @@
           <div class="col-md-12">
             <div class="footer-text text-center">
               <ul class="social-icon">
+                <!--
                 <li>
-                  <a class="youtube" href="https://www.youtube.com/channel/UCfeMEuhdUtxtaUMNSvxq_Xg"><i class="lni lni-youtube"></i></a>
+                  <a class="youtube" href="https://www.youtube.com/channel/UCfeMEuhdUtxtaUMNSvxq_Xg" target="_blank"><i class="lni lni-youtube"></i></a>
                 </li>
+              -->
               </ul>
-              <p>2021 <a href="www.uideck.com"></a>| by <a href="#" target="_blank">Pan</a></p>
+              <p>2021 <a href="#" target="_blank"></a>| by <a target="_blank">Pan</a></p>
             </div>
           </div>
         </div>
@@ -235,9 +230,68 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/form-validator.min.js"></script>
     <script src="assets/js/contact-form-script.min.js"></script>
-    <script src="assets/js/map.js"></script>
-    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM">
     </script>
-      
+
+    <!--
+    <!- - The core Firebase JS SDK is always required and must be listed first - ->
+    <script src="/__/firebase/8.4.3/firebase-app.js"></script>
+
+    <!- - TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries - ->
+    <script src="/__/firebase/8.4.3/firebase-analytics.js"></script>
+
+    <!- - Initialize Firebase - ->
+    <script src="/__/firebase/init.js"></script>
+    -->
+
+    <!-- Firestore stuff -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firestore through Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyDtKaXFkmBdQoyfBxtPWlaDSOcI9_pTDxg",
+        authDomain: "wsbrecommender.firebaseapp.com",
+        projectId: "wsbrecommender",
+        storageBucket: "wsbrecommender.appspot.com",
+        messagingSenderId: "202267046585",
+        appId: "1:202267046585:web:3df1161bd258bf61b56168",
+        measurementId: "G-X3FFY5MSCN"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+        
+      var db = firebase.firestore();
+
+      // Bool tests
+    //   testWrite = false;
+    //   testRead = false;
+
+    //   // Write, perhaps need anonymous login
+    //   if (testWrite) {
+    //   db.collection("emails").add({
+    //       email: "kappa@hotmail.com",
+    //       date: new Date().toDateString(),
+    //       timestamp: firebase.firestore.Timestamp.now()
+    //   })
+    //   .then((docRef) => {
+    //       console.log("Document written with ID: ", docRef.id);
+    //   })
+    //   .catch((error) => {
+    //       console.error("Error adding document: ", error);
+    //   });
+    // }
+
+    //   // Read
+    //   if (testRead) {
+    //     db.collection("emails").get().then((querySnapshot) => {
+    //         querySnapshot.forEach((doc) => {
+    //             //console.log(`${doc.id} => ${doc.data().email}`);
+    //             console.log(doc.data());
+    //         });
+    //     });
+    //}
+    </script>
+    <!--<script src="./firebasestuff.js"></script>-->
   </body>
 </html>
