@@ -6,13 +6,13 @@ Project website: https://wsbrecommender.web.app/
 ***
 # **I. Abstract**
 
-One of the most popular platforms for stocks and financial discussion is a subreddit called WallStreetBets. We would like to help further democratize stock trading by making the access to insightful stock researches easier. Most people already know about the mainstream news outlets, this is why we choose this subreddit, where, although most posts are memes, there are actually some very insightful researches but not yet popularized information. We will use the posts on r/WallStreetBets as our dataset and aim to classify them as either valuable or less valuable posts in order to help any user quickly filter out posts he or she may want to read. This project aims to be particularly useful towards those, such as ourselves, who are interested in trading and investing in the stock market, but have little time to find or do their own researches.
+One of the most popular platforms for stocks and financial discussion is a subreddit called WallStreetBets. We would like to help further democratize stock trading by making the access to insightful stock research easier. Most people already know about the mainstream news outlets, this is why we choose this subreddit, where, although most posts are memes, there are actually some very insightful research but not yet popularized information. We will use the posts on r/WallStreetBets as our dataset and aim to classify them as either valuable or less valuable posts in order to help any user quickly filter out posts he or she may want to read. This project aims to be particularly useful towards those, such as ourselves, who are interested in trading and investing in the stock market, but have little time to find or do their own research.
 
 # **II. Introduction**
 
 With the influx of retail investors during the 2021 Coronavirus pandemic and GameStop fiasco, it is more important than ever for people to educate themselves on investment decisions. The largest financial subreddit, r/WallStreetBets, is home to many memes, however, many **DD*** posts are also present.
 
-Unlike professional investors, retail investors have very limited time to conduct their own research as they usually have a separate career. In this project, we aim to further democratize stock trading by filtering and classifying stock researches such that every regular investor has the opportunity to quickly access them.
+Unlike professional investors, retail investors have very limited time to conduct their own research as they usually have a separate career. In this project, we aim to further democratize stock trading by filtering and classifying stock research such that every regular investor has the opportunity to quickly access them.
 
 We will be able to provide a quick filter on the top research posts as well as a classification on whether any given post may or may not be worth your time to read.
 
@@ -93,9 +93,9 @@ Numerically, with 65% accuracy, our Naive Bayes model doesn't seem tremendously 
 
 ## Closing thoughts
 
-As for utility, we believe our solution, with just a bit more tuning, can actually be useful and create value. In the goal of making access to stock researches easier, we plan to create a website, on which many features would be present. This Naive Bayes classifier can easily be one of the features: by displaying a list of filtered research posts, we may indicate beside each of them, the probability that they would be worth a read.
+As for utility, we believe our solution, with just a bit more tuning, can actually be useful and create value. In the goal of making access to stock research easier, we plan to create a website, on which many features would be present. This Naive Bayes classifier can easily be one of the features: by displaying a list of filtered research posts, we may indicate beside each of them, the probability that they would be worth a read.
 
-We believe this would be of great interest to those, such as ourselves, who like trading and investing in the stock market, but have little time to find and do researches of their own.
+We believe this would be of great interest to those, such as ourselves, who like trading and investing in the stock market, but have little time to find and do research of their own.
 
 In conclusion, this project was incredibly interesting for us. We had the chance to go through essentially the whole data science workflow, from finding a unique problem statement, gathering data, training models and presenting, as well as somewhat accomplish our goal to create something useful. As undergraduate students, it was a tremendous learning experience and we hope to create more exciting projects like this one.
 
