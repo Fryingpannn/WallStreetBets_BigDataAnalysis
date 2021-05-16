@@ -100,7 +100,3 @@ We believe this would be of great interest to those, such as ourselves, who like
 In conclusion, this project was incredibly interesting for us. We had the chance to go through essentially the whole data science workflow, from finding a unique problem statement, gathering data, training models and presenting, as well as somewhat accomplish our goal to create something useful. As undergraduate students, it was a tremendous learning experience and we hope to create more exciting projects like this one.
 
 ***
-
-Matthew Pan - 40135588
-
-Ling Zhi Mo - 40024810
