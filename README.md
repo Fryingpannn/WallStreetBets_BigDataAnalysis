@@ -6,23 +6,23 @@ Project website: https://wsbrecommender.web.app/
 ***
 # **I. Abstract**
 
-One of the most popular platforms for stocks and financial discussion is a subreddit called WallStreetBets. We would like to help further democratize stock trading by making the access to insightful stock research easier. Most people already know about the mainstream news outlets, this is why we choose this subreddit, where, although most posts are memes, there are actually some very insightful research but not yet popularized information. We will use the posts on r/WallStreetBets as our dataset and aim to classify them as either valuable or less valuable posts in order to help any user quickly filter out posts he or she may want to read. This project aims to be particularly useful towards those, such as ourselves, who are interested in trading and investing in the stock market, but have little time to find or do their own research.
+One of the most popular platforms for stocks and financial discussion is a subreddit called WallStreetBets. We would like to help further democratize stock trading by making the access to insightful stock research easier. Most people already know about the mainstream news outlets, this is why we choose this subreddit, where insightful yet unpopularized research information lay in a sea of memes. We will use the posts on r/WallStreetBets as our dataset and aim to classify them as either valuable or less valuable in order to help any user quickly filter out posts he or she may want to read. This project aims to be particularly useful towards those, such as ourselves, who are interested in trading and investing in the stock market, but have little time to do their own research.
 
 # **II. Introduction**
 
-With the influx of retail investors during the 2021 Coronavirus pandemic and GameStop fiasco, it is more important than ever for people to educate themselves on investment decisions. The largest financial subreddit, r/WallStreetBets, is home to many memes, however, many **DD*** posts are also present.
+With the influx of retail investors during the 2021 Coronavirus pandemic and GameStop fiasco, it is more important now than ever for people to educate themselves on investment decisions. The largest financial subreddit, r/WallStreetBets, is home to many memes, however, many **DD*** posts are also present.
 
 Unlike professional investors, retail investors have very limited time to conduct their own research as they usually have a separate career. In this project, we aim to further democratize stock trading by filtering and classifying stock research such that every regular investor has the opportunity to quickly access them.
 
 We will be able to provide a quick filter on the top research posts as well as a classification on whether any given post may or may not be worth your time to read.
 
-A related work is a website called SwaggyStocks.com, in which sentiment analysis of the r/WallStreetBets subreddit is done and visualized. However, we differ from this as we are not trying to explicitly analyze sentiment of the subreddit. Instead, we will base off our filtering upon historical performance of the stocks each post is talking about.
+A related work is a website called SwaggyStocks.com, in which sentiment analysis of the r/WallStreetBets subreddit is done and visualized. However, we differ from this as we are not trying to explicitly analyze sentiment of the subreddit. Instead, we will base off our filtering upon historical performance of the stocks each post is discussing.
 
 ***DD: stands for "Due Diligence". Represents the investigation and research a person has done for a potential investment.**
 
 # **III. Materials and Methods**
 
-Our dataset consist of the posts from the r/WallStreetBets subreddit. They are extracted by using the Pushshift API (we previously used the Reddit PRAW API, but due to API limitations we had to revamp all our code with Pushshift instead which proved to be more flexible). The Pushshift API is able to provide us with a lot information about a given post such as the title, score, upvote ratio, author, text, URL, created time, comments and more. Except for upvote ratio, score, created time, and number of comments, all other data are textual.
+Our dataset consist of the posts from the r/WallStreetBets subreddit. They are extracted by using the Pushshift API (we previously used the Reddit PRAW API, but due to API limitations we had to revamp all our code with Pushshift instead which proved to be more flexible). The Pushshift API is able to provide us with a lot of information about a given post such as the title, score, upvote ratio, author, text, URL, created time, comments and more. Except for upvote ratio, score, created time, and number of comments, all other data are textual.
 
 We also used the iexfinance API to obtain financial data. This API provides the closing price, ticker, financials, cash-flow, volumes of a specific ticker and more.
 
