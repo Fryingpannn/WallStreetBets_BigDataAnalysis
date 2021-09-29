@@ -1,10 +1,7 @@
 from pyspark.rdd import RDD
-from pyspark.sql import Row
-from pyspark.sql import DataFrame
-from pyspark.sql import SparkSession
+from pyspark.sql import Row, DataFrame, SparkSession
 
-from iexfinance.stocks import Stock
-from iexfinance.stocks import get_historical_data
+from iexfinance.stocks import Stock, get_historical_data
 import os
 import re
 import math
